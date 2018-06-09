@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Fee;
 use App\Student;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 
 class FeeController extends Controller
@@ -32,6 +33,8 @@ class FeeController extends Controller
             'amount' => 'required|integer',
             'dateOfPayment' => 'required',
         ]);
+
+       // $message = ['studentId.exists' =>"user no not found"];
 
         $fees = new Fee();
         $fees->studentId = request('studentId');

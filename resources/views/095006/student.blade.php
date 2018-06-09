@@ -17,6 +17,7 @@
         body{
             background: #000033;
             color: black;
+            margin: 0;
         }
         .form{
             border-radius: 0.5em;
@@ -34,6 +35,7 @@
             left: 50%;
             z-index: 1;
             width: 98%;
+            margin-top:3%;
         }
         .form h1{
             font-size: 2em;
@@ -95,10 +97,40 @@
             margin: 10px;
             padding: 0;
         }
+        .topnav {
+            overflow: hidden;
+            background-color: #fab702;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 24px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: #000033;
+        }
+
+        .topnav a.active {
+            background-color: #000033;
+            color: white;
+        }
     </style>
 
 </head>
 <body>
+<div class="topnav">
+    <a  href='{!! url('/'); !!}'>Home</a>
+    <a class="active" href='{!! url('/student'); !!}'>Student</a>
+    <a  href='{!! url('/fees'); !!}'>Fees</a>
+    <a  href='{!! url('/allfee'); !!}'>All Fees Info</a>
+    <a href='{!! url('/search'); !!}'>Search ID</a>
+</div><br>
 <div class="form">
 <form method="post" action="/student/new">
     {{csrf_field()}}

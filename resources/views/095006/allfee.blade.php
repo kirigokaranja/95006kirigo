@@ -66,6 +66,7 @@
     <a href='{!! url('/student'); !!}'>Student</a>
     <a  href='{!! url('/fees'); !!}'>Fees</a>
     <a class="active" href='{!! url('/allfee'); !!}'>All Fees Info</a>
+    <a href='{!! url('/search'); !!}'>Search ID</a>
 </div><br>
 <table>
     <tr>
@@ -82,7 +83,7 @@
             {{--<td>{{$student->firstName}}</td>--}}
         </tr>
     @endforeach
-    <h3>TOTAL: {{$total}}</h3>
+    <h3>TOTAL: Ksh {{$total}}</h3>
 
 </table>
 </body>

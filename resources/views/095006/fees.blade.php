@@ -127,6 +127,7 @@
     <a href='{!! url('/student'); !!}'>Student</a>
     <a class="active" href='{!! url('/fees'); !!}'>Fees</a>
     <a href='{!! url('/allfee'); !!}'>All Fees Info</a>
+    <a href='{!! url('/search'); !!}'>Search ID</a>
 </div>
 <div class="form">
 <form method="post" action="/fees/new">
@@ -154,6 +155,10 @@
             </ul>
         </div>
     @endif
+    @foreach ($errors->get('studentId') as $message) {
+    {{$message}}
+    }
+@endforeach
     <div class="text-center">
         <button class="submit" type="submit" name="Login">Add Fee</button>
     </div><br>

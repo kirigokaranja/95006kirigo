@@ -30,4 +30,8 @@ Route::post('/fees/new', 'FeeController@newfees');
 //VIEW ALL FEE INFORMATION
 Route::get('/allfee','FeeController@show');
 
-Route::resource('queries', 'QueryController');
+//SHOW SEARCH PAGE
+Route::get('/search', 'QueryController@open');
+
+//SEARCH STUDENT NUMBER
+Route::post('/searching', 'QueryController@search');
