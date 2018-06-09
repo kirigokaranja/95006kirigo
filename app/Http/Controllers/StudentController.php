@@ -23,6 +23,7 @@ class StudentController extends Controller
             'dob' => 'required|date',
             'address' => 'required',
         ]);
+//        KIRIGO
 
         $student = new Student();
         $student->studentNumber = request('studentnumber');
